@@ -48,7 +48,7 @@ $(document).ready(function () {
       background: "blue",
     });
   };
-  init();
+  // init();
 
   var score = 0;
   var currCell = { col: 0, row: 0 };
@@ -100,6 +100,8 @@ $(document).ready(function () {
       background: `rgb(${currColor.R},${currColor.G},${currColor.B})`,
     });
   };
+
+  handleCell(); // Set up map default.
 
   const checkEnd = function (row, col) {
     return row == currCell.row && col == currCell.col;
