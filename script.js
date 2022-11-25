@@ -109,6 +109,7 @@ $(document).ready(function () {
   });
 
   $("#reset-btn").click(function () {
+    console.log('clicked');
     resetEveryThing();
   });
 
