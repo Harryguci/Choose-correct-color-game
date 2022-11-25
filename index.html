@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game: Choose Correct color</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main>
+        <div class="frame center">
+            <div class="container-fluid frame__head">
+                <div class="row">
+                    <div class="col-4">
+                        <h2>Game</h2>
+                    </div>
+                    <div class="col-6 d-flex">
+                        <h3 style="margin: auto 0;">
+                            <b>
+                                Score: <span class="score-val" style="color: rgb(250, 200, 0);">0</span>
+                            </b>
+                        </h3>
+                    </div>
+                    <div class="col-2">
+                        <button id="reset-btn" class="btn btn-outline-light">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="frame__main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <div class="item" data-row="0" data-col="0" data-val="0"></div>
+                        </div>
+                        <div class="col">
+                            <div class="item" data-row="0" data-col="1" data-val="0"></div>
+                        </div>
+                        <div class="col">
+                            <div class="item" data-row="0" data-col="2" data-val="0"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item" data-row="1" data-col="0" data-val="0"></div>
+                        </div>
+                        <div class="col">
+                            <div class="item" data-row="1" data-col="1" data-val="0"></div>
+                        </div>
+                        <div class="col">
+                            <div class="item" data-row="1" data-col="2" data-val="0"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item" data-row="2" data-col="0" data-val="0"></div>
+                        </div>
+                        <div class="col">
+                            <div class="item" data-row="2" data-col="1" data-val="0"></div>
+                        </div>
+                        <div class="col">
+                            <div class="item" data-row="2" data-col="2" data-val="0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frame__foot"></div>
+    </main>
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">You are lose !</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>
+                        <b>Max score:</b>
+                        <span class="max-score"></span>
+                    </h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="module" src="./script.js" defer></script>
+</body>
+
+</html>
