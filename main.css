@@ -4,6 +4,7 @@
 html,
 body {
   font-family: sans-serif;
+  background: ;
 }
 .center {
   position: absolute;
@@ -58,6 +59,11 @@ body {
   font-size: 2.5rem !important;
   color: #ffffff !important;
 }
+
+.change-theme .material-symbols-outlined {
+    color: #000000;
+}
+
 
 @media only screen and (max-width: 500px) {
   #reset-btn .material-symbols-outlined {

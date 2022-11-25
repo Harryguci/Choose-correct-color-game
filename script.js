@@ -1,5 +1,14 @@
 $(document).ready(function () {
   let maxScore = 0;
+  $(".change-theme").on("click", function () {
+    if ($("html, body").css("background-color") != "rgb(27, 36, 48)") {
+      $("html, body").css("background", "#1B2430");
+      $(".change-theme .material-symbols-outlined").css("color", "#ffffff");
+    } else {
+      $("html, body").css("background", "#ffffff");
+      $(".change-theme .material-symbols-outlined").css("color", "#1B2430");
+    }
+  });
 
   var gameMap = [
     [0, 0, 0],
@@ -48,7 +57,7 @@ $(document).ready(function () {
     ];
     score = 0;
 
-    $('.score-val').text('0');
+    $(".score-val").text("0");
   };
 
   const handleCell = function () {
@@ -94,7 +103,6 @@ $(document).ready(function () {
 
   $(".frame__main .item").click(function () {
     var is = checkEnd($(this).attr("data-row"), $(this).attr("data-col"));
-    
 
     if (is) {
       score += 5;
@@ -102,19 +110,19 @@ $(document).ready(function () {
     } else {
       maxScore = Math.max(maxScore, score);
       $(".score-val").text("LOOSE");
-      $('.modal .max-score').text(maxScore);
-      $('.modal').show();
+      $(".modal .max-score").text(maxScore);
+      $(".modal").show();
     }
     handleCell();
   });
 
   $("#reset-btn").click(function () {
-    console.log('clicked');
+    console.log("clicked");
     resetEveryThing();
   });
 
-  $('.modal').on('click', function () {
-    $('.modal .modal-footer button').on('click', resetEveryThing());
-    $('.modal').hide();
+  $(".modal").on("click", function () {
+    $(".modal .modal-footer button").on("click", resetEveryThing());
+    $(".modal").hide();
   });
 });
