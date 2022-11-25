@@ -1,12 +1,16 @@
 $(document).ready(function () {
   let maxScore = 0;
+  let modeTheme = 0;
+
   $(".change-theme").on("click", function () {
-    if ($("html, body").css("background-color") != "rgb(27, 36, 48)") {
+    if (modeTheme == 0) {
       $("html, body").css("background", "#1B2430");
       $(".change-theme .material-symbols-outlined").css("color", "#ffffff");
+      modeTheme = 1;
     } else {
       $("html, body").css("background", "#ffffff");
       $(".change-theme .material-symbols-outlined").css("color", "#1B2430");
+      modeTheme = 0;
     }
   });
 
